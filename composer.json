@@ -1,0 +1,36 @@
+{
+    "name": "tuslug/holded-api",
+    "description": "Cliente PHP para la API de Holded, listo para Laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "HoldedApi\\": "src/HoldedApi/"
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HoldedApi\\HoldedServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "autoload-dev": {
+        "psr-4": {
+            "HoldedApi\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.0",
+        "mockery/mockery": "^1.5",
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "test": "pest"
+    }
+}
