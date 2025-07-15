@@ -1,11 +1,11 @@
 {
-    "name": "tuslug/holded-api",
+    "name": "xavicabot/laravel-holded",
     "description": "Cliente PHP para la API de Holded, listo para Laravel",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "HoldedApi\\": "src/HoldedApi/"
+            "HoldedApi\\": "src/LaravelHolded/"
         }
     },
     "require": {

@@ -1,4 +1,4 @@
-# Holded API Laravel Package
+# Laravel Holded Package
 
 Cliente PHP para la API de Holded, diseñado para integrarse fácilmente con Laravel.
 
@@ -7,7 +7,7 @@ Cliente PHP para la API de Holded, diseñado para integrarse fácilmente con Lar
 ## 🚀 Instalación
 
 ```bash
-composer require xavicabot/Holded-Laravel
+composer require xavicabot/laravel-holded
 ```
 
 ---
@@ -70,7 +70,7 @@ composer test
 
 ## ✍️ Créditos
 
-Creado por [Tu Nombre o Empresa](https://tusitio.com)
+Creado por [Xavi Cabot](https://tusitio.com)
 
 ---
 
