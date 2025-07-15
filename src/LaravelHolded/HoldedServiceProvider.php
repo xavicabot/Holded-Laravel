@@ -1,6 +1,6 @@
 <?php
 
-namespace HoldedApi;
+namespace LaravelHolded;
 
 use Illuminate\Support\ServiceProvider;
 use HoldedApi\Contracts\HoldedInterface;

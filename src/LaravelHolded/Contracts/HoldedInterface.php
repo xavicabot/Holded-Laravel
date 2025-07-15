@@ -1,6 +1,6 @@
 <?php
 
-namespace HoldedApi\Contracts;
+namespace LaravelHolded\Contracts;
 
 interface HoldedInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace HoldedApi;
+namespace LaravelHolded;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;

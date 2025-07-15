@@ -17,7 +17,7 @@ composer require xavicabot/laravel-holded
 Publica el archivo de configuración:
 
 ```bash
-php artisan vendor:publish --tag=config --provider="HoldedApi\HoldedServiceProvider"
+php artisan vendor:publish --tag=config --provider="LaravelHolded\HoldedServiceProvider"
 ```
 
 Agrega en tu `.env`:
