@@ -7,13 +7,7 @@ Cliente PHP para la API de Holded, diseñado para integrarse fácilmente con Lar
 ## 🚀 Instalación
 
 ```bash
-composer require tuslug/holded-api
-```
-
-O, si trabajas en local:
-
-```bash
-composer require path/to/holded-api-package-with-tests.zip
+composer require xavicabot/Holded-Laravel
 ```
 
 ---
