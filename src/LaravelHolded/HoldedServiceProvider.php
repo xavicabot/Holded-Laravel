@@ -3,7 +3,7 @@
 namespace LaravelHolded;
 
 use Illuminate\Support\ServiceProvider;
-use HoldedApi\Contracts\HoldedInterface;
+use LaravelHolded\Contracts\HoldedInterface;
 
 class HoldedServiceProvider extends ServiceProvider
 {

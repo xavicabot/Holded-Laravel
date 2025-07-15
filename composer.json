@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "HoldedApi\\": "src/LaravelHolded/"
+            "LaravelHolded\\": "src/LaravelHolded/"
         }
     },
     "require": {
@@ -15,14 +15,14 @@
     "extra": {
         "laravel": {
             "providers": [
-                "HoldedApi\\HoldedServiceProvider"
+                "LaravelHolded\\HoldedServiceProvider"
             ]
         }
     },
     "minimum-stability": "stable",
     "autoload-dev": {
         "psr-4": {
-            "HoldedApi\\Tests\\": "tests/"
+            "LaravelHolded\\Tests\\": "tests/"
         }
     },
     "require-dev": {

@@ -32,7 +32,7 @@ HOLDED_API_URL=https://api.holded.com/api/invoicing/v1/
 ## ✅ Uso
 
 ```php
-use HoldedApi\Holded;
+use LaravelHolded\Holded;
 
 $holded = app(Holded::class);
 

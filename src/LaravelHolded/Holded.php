@@ -4,7 +4,7 @@ namespace LaravelHolded;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use HoldedApi\Contracts\HoldedInterface;
+use LaravelHolded\Contracts\HoldedInterface;
 
 class Holded implements HoldedInterface
 {

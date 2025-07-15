@@ -1,6 +1,6 @@
 <?php
 
-use HoldedApi\Holded;
+use LaravelHolded\Holded;
 
 it('can instantiate the Holded class', function () {
     $holded = new Holded();
