@@ -1,0 +1,22 @@
+/vendor
+/node_modules
+/.idea
+/.vscode
+.DS_Store
+
+# composer logs and cache
+composer.lock
+composer.phar
+
+# Laravel testbench / Pest cache
+.phpunit.result.cache
+/.pest.php
+
+# PHPUnit coverage
+coverage/
+
+# OS-specific
+Thumbs.db
+.idea/laravel-holded.iml
+.idea/php-test-framework.xml
+.idea/php.xml

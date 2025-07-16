@@ -3,8 +3,9 @@
 namespace XaviCabot\Laravel\Holded;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\GuzzleException;
 use XaviCabot\Laravel\Holded\Contracts\HoldedInterface;
+use XaviCabot\Laravel\Holded\Modules\DocumentModule;
+use XaviCabot\Laravel\Holded\Modules\ContactModule;
 
 class Holded implements HoldedInterface
 {
@@ -19,52 +20,13 @@ class Holded implements HoldedInterface
         $this->client = $client ?? new Client();
     }
 
-    public function listContacts(int $page = 1): array
+    public function document(): DocumentModule
     {
-        return $this->request('GET', "contacts?page={$page}");
+        return new DocumentModule($this->client, $this->apiKey, $this->baseUrl);
     }
 
-    public function getContact(string $id): array
+    public function contact(): ContactModule
     {
-        return $this->request('GET', "contacts/{$id}");
-    }
-
-    public function createContact(array $contact): array
-    {
-        return $this->request('POST', 'contacts', $contact);
-    }
-
-    public function updateContact(string $id, array $data): array
-    {
-        return $this->request('PUT', "contacts/{$id}", $data);
-    }
-
-    public function createDocument(string $type, array $data): array
-    {
-        return $this->request('POST', "documents/{$type}", $data);
-    }
-
-    protected function request(string $method, string $endpoint, array $body = []): array
-    {
-        try {
-            $options = [
-                'headers' => [
-                    'Accept' => 'application/json',
-                    'Content-Type' => 'application/json',
-                    'key' => $this->apiKey,
-                ],
-            ];
-
-            if (!empty($body)) {
-                $options['json'] = $body;
-            }
-
-            $response = $this->client->request($method, $this->baseUrl . $endpoint, $options);
-
-            return json_decode($response->getBody()->getContents(), true) ?? [];
-        } catch (GuzzleException $e) {
-            report($e);
-            return ['error' => $e->getMessage()];
-        }
+        return new ContactModule($this->client, $this->apiKey, $this->baseUrl);
     }
 }

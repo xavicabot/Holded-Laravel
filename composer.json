@@ -35,11 +35,17 @@
         }
     },
     "require-dev": {
-        "pestphp/pest": "^2.0",
-        "mockery/mockery": "^1.5",
-        "phpunit/phpunit": "^9.5"
+        "pestphp/pest": "^3.8",
+        "mockery/mockery": "^1.6",
+        "phpunit/phpunit": "^11.5",
+        "orchestra/testbench": "^10.4"
     },
     "scripts": {
         "test": "pest"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     }
 }
