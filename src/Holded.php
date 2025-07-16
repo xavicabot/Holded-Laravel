@@ -14,7 +14,7 @@ class Holded implements HoldedInterface
 
     public function __construct(?Client $client = null)
     {
-        $this->apiKey = config('holded.key');
+        $this->apiKey = config('holded.api_key');
         $this->baseUrl = rtrim(config('holded.base_url'), '/') . '/';
         $this->client = $client ?? new Client();
     }
