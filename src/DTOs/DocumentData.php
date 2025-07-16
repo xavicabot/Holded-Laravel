@@ -8,6 +8,7 @@ use InvalidArgumentException;
 class DocumentData
 {
     public function __construct(
+        public int|string|\DateTimeInterface $date,
         public ?string $contactCode = null,
         public ?string $contactId = null,
         public ?string $contactName = null,
@@ -18,7 +19,6 @@ class DocumentData
         public ?string $contactProvince = null,
         public ?string $contactCountryCode = null,
         public ?string $desc = null,
-        public int|string|\DateTimeInterface $date,
         public ?string $notes = null,
         public ?string $salesChannelId = null,
         public ?string $paymentMethodId = null,
