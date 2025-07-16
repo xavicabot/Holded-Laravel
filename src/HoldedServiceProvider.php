@@ -9,11 +9,13 @@ class HoldedServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/holded.php', 'holded');
+        $this->mergeConfigFrom(__DIR__ . '/../../config/holded.php', 'holded');
 
         $this->app->singleton(HoldedInterface::class, function () {
             return new Holded();
         });
+
+        $this->app->alias(HoldedInterface::class, 'holded');
     }
 
     public function boot()
@@ -23,6 +25,9 @@ class HoldedServiceProvider extends ServiceProvider
         ]);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function provides()
     {
         return [
@@ -30,4 +35,5 @@ class HoldedServiceProvider extends ServiceProvider
             Holded::class
         ];
     }
+
 }
