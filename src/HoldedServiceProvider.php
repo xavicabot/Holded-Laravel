@@ -3,20 +3,17 @@
 namespace XaviCabot\Laravel\Holded;
 
 use Illuminate\Support\ServiceProvider;
+use XaviCabot\Laravel\Holded\Contracts\HoldedInterface;
 
 class HoldedServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->singleton('holded', function ($app) {
-            $config = $app['config']->get('holded');
-            return new Holded(
-                isset($config['api_key']) ? $config['api_key'] : null,
-                isset($config['base_url']) ? $config['base_url'] : null
-            );
-        });
+        $this->mergeConfigFrom(__DIR__ . '/../../config/holded.php', 'holded');
 
-        $this->app->alias('holded', Holded::class);
+        $this->app->singleton(HoldedInterface::class, function () {
+            return new Holded();
+        });
     }
 
     public function boot()
@@ -25,6 +22,7 @@ class HoldedServiceProvider extends ServiceProvider
             __DIR__ . '/config/holded.php' => config_path('holded.php'),
         ]);
     }
+
     public function provides()
     {
         return [
@@ -32,5 +30,4 @@ class HoldedServiceProvider extends ServiceProvider
             Holded::class
         ];
     }
-
 }
