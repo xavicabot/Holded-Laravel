@@ -32,13 +32,11 @@ HOLDED_API_URL=https://api.holded.com/api/invoicing/v1/
 ## ✅ Uso
 
 ```php
-use LaravelHolded\Holded;
+use LaravelHolded\Facades\Holded;
 
-$holded = app(Holded::class);
-
-$contacts = $holded->listContacts();
-$contact = $holded->getContact('contactId');
-$newContact = $holded->createContact(['name' => 'Cliente nuevo']);
+$contacts = Holded::listContacts();
+$contact = Holded::getContact('contactId');
+$newContact = Holded::createContact(['name' => 'Cliente nuevo']);
 ```
 
 ---
