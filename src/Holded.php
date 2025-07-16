@@ -4,7 +4,7 @@ namespace XaviCabot\Laravel\Holded;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use src\Contracts\HoldedInterface;
+use XaviCabot\Laravel\Holded\Contracts\HoldedInterface;
 
 class Holded implements HoldedInterface
 {
