@@ -19,7 +19,7 @@ class HoldedServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/config/holded.php' => config_path('holded.php'),
+            __DIR__ . '../config/holded.php' => config_path('holded.php'),
         ]);
     }
 
