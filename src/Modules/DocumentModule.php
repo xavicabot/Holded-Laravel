@@ -13,6 +13,11 @@ class DocumentModule
         protected string $baseUrl
     ) {}
 
+    public function list(int $page = 1, string $docType = 'invoice'): array
+    {
+        return $this->request('GET', "documents/{$docType}?page={$page}");
+    }
+
     public function create(DocumentData|array $data, string $docType = 'invoice'): array
     {
         return $this->request('POST', "documents/{$docType}", $data);
