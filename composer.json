@@ -3,6 +3,12 @@
     "description": "Cliente PHP para la API de Holded, listo para Laravel",
     "type": "library",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Xavi Cabot",
+            "email": "xavi@unancor.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "XaviCabot\\Laravel\\Holded\\": "src/"

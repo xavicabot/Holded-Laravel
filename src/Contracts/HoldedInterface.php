@@ -1,6 +1,7 @@
 <?php
 
-namespace src\Contracts;
+namespace XaviCabot\Laravel\Holded\Contracts;
+
 
 interface HoldedInterface
 {

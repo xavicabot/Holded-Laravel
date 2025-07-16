@@ -1,10 +1,10 @@
 <?php
 
-namespace src\Facades;
+namespace XaviCabot\Laravel\Holded\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class HoldedFacade extends Facade
+class Holded extends Facade
 {
     protected static function getFacadeAccessor(): string
     {

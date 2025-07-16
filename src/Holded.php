@@ -1,12 +1,10 @@
 <?php
 
-namespace src;
+namespace XaviCabot\Laravel\Holded;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use src\Contracts\HoldedInterface;
-use function LaravelHolded\config;
-use function LaravelHolded\report;
 
 class Holded implements HoldedInterface
 {

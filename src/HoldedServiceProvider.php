@@ -1,10 +1,8 @@
 <?php
 
-namespace src;
+namespace XaviCabot\Laravel\Holded;
 
 use Illuminate\Support\ServiceProvider;
-use src\Contracts\HoldedInterface;
-use src\Holded;
 
 class HoldedServiceProvider extends ServiceProvider
 {
