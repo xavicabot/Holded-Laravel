@@ -9,7 +9,7 @@ class HoldedServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../../config/holded.php', 'holded');
+        $this->mergeConfigFrom(__DIR__ . '/../config/holded.php', 'holded');
 
         $this->app->singleton(HoldedInterface::class, function () {
             return new Holded();
