@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "LaravelHolded\\": "src/LaravelHolded/"
+            "XaviCabot\\Laravel\\Holded\\": "src/"
         }
     },
     "require": {
@@ -15,8 +15,11 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LaravelHolded\\HoldedServiceProvider"
-            ]
+                "XaviCabot\\Laravel\\Holded\\HoldedServiceProvider"
+            ],
+            "aliases": {
+                "Holded": "XaviCabot\\Laravel\\Holded\\Facades\\Holded"
+            }
         }
     },
     "minimum-stability": "stable",
